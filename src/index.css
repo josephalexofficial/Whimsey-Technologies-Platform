@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-jost bg-white text-[#0F172A] transition-colors duration-300 ease-in-out;
+  }
+
+  html.dark body {
+    @apply bg-[#0B0F19] text-white;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply py-12 md:py-24 lg:py-32;
+  }
+
+  .container-fluid {
+    @apply mx-auto w-full max-w-7xl px-5 md:px-8;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-lg bg-[#0056D2] px-6 py-3 font-medium text-white transition-all duration-300 ease-out hover:bg-[#0047b3] focus:outline-none focus:ring-2 focus:ring-[#0056D2]/50;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center rounded-lg border border-[#0F172A]/20 px-6 py-3 font-medium transition-all duration-300 ease-out hover:border-[#0056D2] hover:text-[#0056D2] focus:outline-none focus:ring-2 focus:ring-[#0056D2]/50 dark:border-white/20 dark:hover:border-[#0056D2] dark:hover:text-[#0056D2];
+  }
+
+  .overline {
+    @apply text-xs font-medium uppercase tracking-[0.2em] text-[#0F172A]/50 dark:text-white/50;
+  }
+
+  .thread-link {
+    @apply flex items-center gap-2 transition-all duration-300 ease-out hover:translate-x-1 hover:text-[#0056D2];
+  }
+
+  .text-subheadline {
+    @apply text-lg leading-relaxed text-[#334155] dark:text-[#CBD5E1];
+  }
+
+  .text-body-muted {
+    @apply leading-relaxed text-[#475569] dark:text-[#94A3B8];
+  }
+
+  .text-caption-muted {
+    @apply text-sm leading-relaxed text-[#475569] dark:text-[#94A3B8];
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
