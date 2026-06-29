@@ -1,13 +1,13 @@
 export default function HeroGraphic() {
   return (
-    <div className="relative flex items-center justify-center">
+    <div className="relative flex w-full items-center justify-center">
       <svg
         viewBox="0 0 400 400"
-        className="h-auto w-full max-w-md"
+        className="h-auto w-full max-w-[340px] md:max-w-md"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-      >
-        {/* Background grid */}
+        aria-hidden="true"
+      >        {/* Background grid */}
         <defs>
           <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
             <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#0056D2" strokeOpacity="0.08" strokeWidth="1" />
